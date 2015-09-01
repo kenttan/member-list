@@ -1,4 +1,4 @@
-#ST Dev KL's Member List
+#Member List [![Dependency Status](https://gemnasium.com/StarTrackDevKL/member-list.svg)](https://gemnasium.com/StarTrackDevKL/member-list)
 The quick way for us to evaluate your AngularJS skill
 
 ## Requirements
