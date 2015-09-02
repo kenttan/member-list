@@ -3,34 +3,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ST Dev KL Member List</title>
-    <link rel="stylesheet" href="src/styles.css" type="text/css" />
+
+    <!-- Bower Components CSS Begin -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css"/>
+    <!-- Bower Components CSS End -->
+
+    <link rel="stylesheet" href="src/styles.css" />
+
 </head>
 <body ng-app="app.memberList">
-    <div id="form">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" placeholder="ST Dev KL" name="name">
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" placeholder="user@domain.com" name="email">
-        </div>
-        <div>
-            <label for="tel">Telephone:</label>
-            <input type="tel" placeholder="" name="tel">
-        </div>
-        <div>
-            <button type="button" name="submit">Submit</button>
-        </div>
+
+    <!-- Navigation bar Begin -->
+    <nav>
+    <div class="nav-wrapper">
+      <a href="" class="brand-logo">ST Dev</a>
     </div>
-    <div id="member-list">
-        <div id="member-list-header">
-            <div>ID</div>
-            <div>Name</div>
-            <div>Telephone</div>
-            <div>Date Added</div>
-        </div>
+    </nav>
+    <!-- Navigation bar End -->
+
+    <!-- Angular View Begin -->
+    <div class="container">
+        <div ng-view=""></div>
     </div>
-    <script src="bower_components/angular/angular.min.js" type="application/javascript"></script>
-    <script src="src/script.js" type="application/javascript"></script>
+    <!-- Angular View End -->
+
+    <!-- Footer Begin -->
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Interview assessment</h5>
+                <p class="grey-text text-lighten-4">AngularJs Member list</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            Tan Yong Kent @ 2015
+            <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/profile/view?id=AAIAABcIU8UBcoejZuQxAvw87Tv-U4yIjHQ3qpQ&trk=nav_responsive_tab_profile_pic">Kent's LinkedIn</a>
+            </div>
+          </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bower Components Begin -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <!-- Bower Components End -->
+
+    <!-- Angular Js Module Begin -->
+    <script src="src/script.js"></script>
+
+    <!-- Controller -->
+    <script src="src/controller/userForm.js"></script>
+
+    <!-- Angular Js Module End -->
 </body>

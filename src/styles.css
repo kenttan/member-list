@@ -1,0 +1,37 @@
+body {
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #5e5e5e;
+  background-color: #EEE;
+}
+
+.input-field label {
+	left: 0px;
+}
+
+nav .brand-logo {
+  margin-left: 10px;
+}
+
+nav {
+  background-color: #03a9f4;
+}
+
+a:hover, a:active {
+  text-decoration:none;
+}
+
+
+footer.page-footer { 
+  background-color: #03a9f4;
+}
+
+.line-padding {
+	height: 60px; 
+	line-height: 60px;
+	font-size: 10px;
+}
+
+.line-h {
+	line-height: 44px;
+}

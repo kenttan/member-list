@@ -1,0 +1,64 @@
+<div class="row card">
+   <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">ST Dev KL's Member</h2>
+
+            <form name="userForm" role="form" style="margin: 15px 10px;" ng-submit="userCtrl.submitUserDetails()" novalidate>
+              <div class="form-group">
+                <div class="input-field">
+                      <input id="name" type="text" class="validate" ng-model="userCtrl.userDetails.userName" required>
+                      <label for="name">Name</label>
+                </div>
+              </div>
+              <div class="form-group">
+                    <div class="input-field">
+                      <input id="email" type="email" class="validate" ng-model="userCtrl.userDetails.userEmail" required>
+                      <label for="email">Email</label>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <div class="input-field">
+                      <input id="tel" type="text" class="validate" ng-model="userCtrl.userDetails.userTel" required>
+                      <label for="tel">Telephone</label>
+                    </div>
+              </div>
+              <button type="submit" class="waves-effect waves-light btn pull-right" ng-disabled="userForm.$invalid">Save</button>
+            </form>
+        </div>
+    </div>
+
+   </div>
+
+
+   <div class="col-md-6">
+    <ul class="collection" ng-show="userCtrl.userDetailList.length">
+        <li class="collection-item avatar" ng-repeat="userDetails in userCtrl.userDetailList">
+          <i class="material-icons circle">User</i>
+          <span class="title">{{userDetails.userName}}</span>
+          <p>{{userDetails.userEmail}}</p>
+          <p>{{userDetails.userTel}}</p>
+          <p>{{userDetails.createdDate}}</p>
+          <a href="" class="secondary-content" ng-click="userCtrl.removeUser(userDetails)">Remove</a>
+        </li>
+      </ul>
+
+    <div ng-show="!userCtrl.userDetailList.length">
+       <span align="center">
+          <!-- padding -->
+          <div class="line-padding"> </div>
+          <div class="line-h">
+             <font face="Arial, Helvetica, sans-serif" size="5" color="#57697e" style="font-size: 34px;">
+             <span style="font-family: Arial, Helvetica, sans-serif; font-size: 34px; color: #57697e;">
+                There is no user in list
+             </span></font>
+          </div>
+          <!-- padding -->
+          <div class="line-padding"> </div>
+       </span>
+    </div>
+   </div>
+
+</div>
+
+  
